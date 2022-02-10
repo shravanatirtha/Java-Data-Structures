@@ -37,24 +37,27 @@ public class BinaryTreeCreation {
         postorder(root.right);
         System.out.print(root.data + " ");
     }
-    public static void levelorder(Node root){
-        if(root==null)
-        return;
-        Queue<Node> q=new LinkedList<Node>();
+
+    public static void levelorder(Node root) {
+        if (root == null)
+            return;
+        Queue<Node> q = new LinkedList<Node>();
         q.add(root);
         q.add(null);
-        while(!q.isEmpty()){
-            Node current=q.remove();
-            if(current==null){
+        while (!q.isEmpty()) {
+            Node current = q.remove();
+            if (current == null) {
                 System.out.println();
-                if (q.isEmpty()) break;
-                else q.add(null);
-            }else{
-                System.out.print(current.data+" ");
-                if(current.left!=null)
-                q.add(current.left);
-                if(current.right!=null)
-                q.add(current.right);
+                if (q.isEmpty())
+                    break;
+                else
+                    q.add(null);
+            } else {
+                System.out.print(current.data + " ");
+                if (current.left != null)
+                    q.add(current.left);
+                if (current.right != null)
+                    q.add(current.right);
             }
         }
     }
