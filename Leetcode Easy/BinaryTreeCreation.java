@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BinaryTreeCreation {
     // binary tree creation
     static class Node {
@@ -35,6 +37,27 @@ public class BinaryTreeCreation {
         postorder(root.right);
         System.out.print(root.data + " ");
     }
+    public static void levelorder(Node root){
+        if(root==null)
+        return;
+        Queue<Node> q=new LinkedList<Node>();
+        q.add(root);
+        q.add(null);
+        while(!q.isEmpty()){
+            Node current=q.remove();
+            if(current==null){
+                System.out.println();
+                if (q.isEmpty()) break;
+                else q.add(null);
+            }else{
+                System.out.print(current.data+" ");
+                if(current.left!=null)
+                q.add(current.left);
+                if(current.right!=null)
+                q.add(current.right);
+            }
+        }
+    }
 
     public static void main(String[] args) {
         int[] a = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
@@ -45,6 +68,8 @@ public class BinaryTreeCreation {
         inorder(root);
         System.out.println();
         postorder(root);
+        System.out.println();
+        levelorder(root);
     }
 
     static class BinaryTree {
