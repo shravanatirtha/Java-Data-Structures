@@ -28,7 +28,7 @@ public class BinaryTreeCreation {
         inorder(root.right);
     }
 
-    public static void postorder(Node root) {
+    public static void postorder(Node root) { // left-right-root
         if (root == null)
             return;
         postorder(root.left);
