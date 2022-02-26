@@ -5,9 +5,9 @@ public class LinkedListCreation {
         Scanner sc = new Scanner(System.in);
         List list=new List();
         String a = sc.nextLine();
-        System.out.println(list.addData(a));
+        list.addData(a);
         String b = sc.nextLine();
-        System.out.println(list.addData(b));
+        list.addData(b);
         sc.close();
     }
 }
@@ -49,7 +49,7 @@ class List {
         return tail;
     }
 
-    public Node addData(String data) {
+    public void addData(String data) {
         Node node = new Node(data);
         if (this.head == null)
             this.head = this.tail = null;
@@ -57,6 +57,5 @@ class List {
             this.tail.setNext(node);
             this.tail = node;
         }
-        return node;
     }
 }
