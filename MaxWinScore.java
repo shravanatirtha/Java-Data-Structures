@@ -1,4 +1,3 @@
-
 /*
 In an online game, N blocks are arranged in a hierarchical manner. All the blocks are connected together by a total of N-1 connections. Each block is given an ID from 1 to N. A block may be further connected to other blocks. Each block is also assigned a specific point value.
 
@@ -13,17 +12,19 @@ Note: The answer can always be represented with 64 bits.
 */
 public class MaxWinScore {
     public Long findMaxScore(Node root) {
-        if(root==null) return (long)1;
-        Long left=findMaxScore(root.left);
-        Long right=findMaxScore(root.right);
-        return Math.max((root.data*left),(root.data*right));
+        if (root == null)
+            return (long) 1;
+        Long left = findMaxScore(root.left);
+        Long right = findMaxScore(root.right);
+        return Math.max((root.data * left), (root.data * right));
     }
 }
 
-class Node{
+class Node {
     int data;
     Node right;
     Node left;
+
     Nonde(int data){
         this.data=data;
         left=null;
