@@ -7,7 +7,7 @@ Since the answer may be too large, return it modulo 10^9 + 7.
 
 */  
 public class countOrders {
-    public int countOrders(int n) {
+    public int countorders(int n) {
         long res = 1;
         long mod = (long)1e9 + 7;
        for (int i = 1; i <= n; ++i)
