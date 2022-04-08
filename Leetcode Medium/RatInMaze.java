@@ -19,20 +19,13 @@ public class RatInMaze {
     }
 
     static boolean solve(int[][] maze, int n, int m, int row, int col, int[] x, int[] y) {
-        if (row == (n - 1) && col == (m - 1)) //base case
+        if (row == (n - 1) && col == (m - 1)) // base case
             return true;
-        else {
+        else //recursive case
             for (int i = 0; i < 2; i++)
-                if (isSafe(maze, row + x[i], col + y[i], n, m)) {
-                    
+                if (isSafe(maze, row + x[i], col + y[i], n, m))
                     return solve(maze, n, m, row + x[i], col + y[i], x, y);
-                    // int a=row + x[i];
-                    // int b=col + y[i];
-                    // System.out.println(maze[row + x[i]][col + y[i]]+" "+a+" "+b);
-                    // solve(maze, n, m, row + x[i], col + y[i], x, y);
-                }
 
-        }
         return false;
     }
 
