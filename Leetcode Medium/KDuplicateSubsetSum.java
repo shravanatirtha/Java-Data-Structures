@@ -6,16 +6,16 @@ public class KDuplicateSubsetSum {
         String s = sc.nextLine();
         int target = sc.nextInt();
         List<String> a = Arrays.asList(s.split("\\s"));
-        List<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         for (String i : a)
             list.add(Integer.parseInt(i));
-        List<Integer> val = new ArrayList<>();
-        List<Integer> ind = new ArrayList<>();
+        ArrayList<Integer> val = new ArrayList<>();
+        ArrayList<Integer> ind = new ArrayList<>();
         solve(list, target, val, ind, list.size());
         sc.close();
     }
 
-    static void solve(List<Integer> list, int target, List<Integer> val, List<Integer> ind, int n) {
+    static void solve(List<> list, int target, ArrayList<Integer> val, ArrayList<Integer> ind, int n) {
         if (target == 0)
             System.out.println(val);
         else {

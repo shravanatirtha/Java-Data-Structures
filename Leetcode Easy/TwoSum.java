@@ -53,18 +53,20 @@ class Solution {
 
 //The following code runs in O(n)
 import java.util.*;
+
 class TwoSum {
-    public static void main(String[] args){
-        int[]  nums={5,4,6,7,1,2,3,9,8};
-        int target=9;
-        System.out.println(Arrays.toString(twoSum(nums,target)));
+    public static void main(String[] args) {
+        int[] nums = { 5, 4, 6, 7, 1, 2, 3, 9, 8 };
+        int target = 9;
+        System.out.println(Arrays.toString(twoSum(nums, target)));
     }
+
     public static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        for(int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int required = target - nums[i];
-            if(map.containsKey(required)) {
-                return new int[]{map.get(required), i};
+            if (map.containsKey(required)) {
+                return new int[] { map.get(required), i };
             }
             map.put(nums[i], i);
         }
