@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "Leetcode Medium",
         "Leetcode Hard",
+        "Leetcode Easy",
         "CodeChef",
-        "Leetcode Easy"
+        "KickStart 2022/Round C"
     ]
 }
